@@ -1,13 +1,13 @@
 {
-    "name": "thefuzz69/yii2-json-rpc",
-    "description": "A lightweight JsonRpc Server and Client for PHP (Fork of nizsheanez's yii2-json-rpc package)",
+    "name": "avbondarev/yii2-jsonrpc",
+    "description": "A simple JsonRpc Server and Client for PHP (Fork of nizsheanez's yii2-json-rpc package)",
     "type": "yii2-extension",
     "license": "BSD-3-Clause",
     "keywords": ["yii", "yii2", "json", "rpc", "jsonrpc"],
     "minimum-stability": "dev",
     "authors": [
         {
-            "name": "Fuzz"
+            "name": "Bondarev"
         }
     ],
     "require": {
@@ -16,8 +16,8 @@
     },
     "autoload": {
         "psr-0": {
-            "thefuzz69\\jsonRpc\\": ""
+            "avbondarev\\jsonRpc\\": ""
         }
     },
-    "target-dir": "thefuzz69/jsonRpc"
+    "target-dir": "avbondarev/jsonRpc"
 }

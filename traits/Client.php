@@ -5,7 +5,7 @@ use thefuzz69\jsonRpc\Exception;
 
 trait Client
 {
-    public function callServer($method, $params, $url)
+    public function callServer($method, $params, $url, $contextHeaders)
     {
         $id = $this->newId();
         $request = [
@@ -15,7 +15,7 @@ trait Client
             'id' => $id
         ];
 
-        $ctx = $this->getHttpStreamContext($request);
+        $ctx = $this->getHttpStreamContext($request,$contextHeaders);
         $jsonResponse = file_get_contents($url, false, $ctx);
 
         if ($jsonResponse === '') {
@@ -41,14 +41,14 @@ trait Client
         }
     }
 
-    public function getHttpStreamContext($request)
+    public function getHttpStreamContext($request,$contextHeaders)
     {
         $jsonRequest = json_encode($request);
 
         $ctx = stream_context_create([
             'http' => [
                 'method' => 'POST',
-                'header' => "Content-Type: " . Exception::MIME . "\r\n",
+                'header' =>  $contextHeaders,
                 'content' => $jsonRequest
             ]
         ]);
