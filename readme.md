@@ -1,19 +1,5 @@
 JsonRpc Client for Yii2
 
-
-##Usage Server
-
-1) Install with Composer
-
-~~~php
-"require": {
-    "avbondarev/yii2-jsonrpc-client": "*",
-},
-
-php composer.phar update
-~~~
-
-
 ##Usage Client
 
 ~~~php
