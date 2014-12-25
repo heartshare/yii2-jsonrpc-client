@@ -16,8 +16,8 @@
     },
     "autoload": {
         "psr-0": {
-            "jsonRpcClient\\": ""
+            "avbondarev\\jsonRpcClient\\": ""
         }
     },
-    "target-dir": "jsonRpcClient"
+    "target-dir": "avbondarev/jsonRpcClient"
 }
