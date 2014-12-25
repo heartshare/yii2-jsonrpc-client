@@ -1,13 +1,13 @@
 {
-    "name": "avbondarev/yii2-jsonrpc",
-    "description": "A simple JsonRpc Server and Client for PHP (Fork of nizsheanez's yii2-json-rpc package)",
+    "name": "avbondarev/yii2-jsonrpc-client",
+    "description": "A simple JsonRpc Client for PHP",
     "type": "yii2-extension",
     "license": "BSD-3-Clause",
-    "keywords": ["yii", "yii2", "json", "rpc", "jsonrpc"],
+    "keywords": [ "yii2", "jsonrpc","client"],
     "minimum-stability": "dev",
     "authors": [
         {
-            "name": "Bondarev"
+            "name": "Alexander Bondarev"
         }
     ],
     "require": {
@@ -16,8 +16,8 @@
     },
     "autoload": {
         "psr-0": {
-            "avbondarev\\jsonRpc\\": ""
+            "avbondarev\\jsonRpcClient\\": ""
         }
     },
-    "target-dir": "avbondarev/jsonRpc"
+    "target-dir": "avbondarev/jsonRpcClient"
 }

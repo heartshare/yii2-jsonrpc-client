@@ -1,8 +1,8 @@
 <?
-namespace thefuzz69\jsonRpc;
+namespace avbondarev\jsonRpcClient;
 
 /**
- * @author sergey.yusupov, alex.sharov
+ * @author sergey.yusupov, alex.sharov, alex.bondarev
  */
 class Client
 {
@@ -15,7 +15,6 @@ class Client
     {
         $this->url = $url;
         $this->contextHeaders = array_merge($this->contextHeaders,$contextHeaders);
-
     }
 
     public function __call($name, $arguments)

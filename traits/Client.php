@@ -1,7 +1,7 @@
 <?php
-namespace thefuzz69\jsonRpc\traits;
+namespace avbondarev\jsonRpcClient\traits;
 
-use thefuzz69\jsonRpc\Exception;
+use avbondarev\jsonRpcClient\Exception;
 
 trait Client
 {
