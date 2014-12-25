@@ -3,8 +3,20 @@ namespace avbondarev\jsonRpcClient\traits;
 
 use avbondarev\jsonRpcClient\Exception;
 
+/**
+ * Class Client
+ * @package avbondarev\jsonRpcClient\traits
+ */
 trait Client
 {
+    /**
+     * Call server url with params and headers
+     * @param $method
+     * @param $params
+     * @param $url
+     * @param $contextHeaders
+     * @throws Exception
+     */
     public function callServer($method, $params, $url, $contextHeaders)
     {
         $id = $this->newId();
@@ -41,6 +53,12 @@ trait Client
         }
     }
 
+    /**
+     * Create context for request
+     * @param $request
+     * @param $contextHeaders
+     * @return resource
+     */
     public function getHttpStreamContext($request,$contextHeaders)
     {
         $jsonRequest = json_encode($request);
@@ -56,14 +74,10 @@ trait Client
         return $ctx;
     }
 
-    public static function isValidRequest($request)
-    {
-        $version = isset($request['jsonrpc']) && $request['jsonrpc'] == '2.0';
-        $method = isset($request['method']);
-        $id = isset($request['id']);
-        return $version && $method && $id;
-    }
-
+    /**
+     * Generate unique id for request
+     * @return string
+     */
     public function newId()
     {
         return md5(microtime());
